@@ -1,0 +1,16 @@
+{
+  "trending": [
+    { "title": "Avatar", "poster": "https://image.tmdb.org/t/p/w500/8N0DNaF1u5vvMZWjzZWc7z3RLOd.jpg" },
+    { "title": "Iron Man", "poster": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" },
+    { "title": "Avengers", "poster": "https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg" }
+  ],
+  "toprated": [
+    { "title": "Inception", "poster": "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg" },
+    { "title": "The Dark Knight", "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" },
+    { "title": "Interstellar", "poster": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" }
+  ],
+  "originals": [
+    { "title": "Stranger Things", "poster": "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg" },
+    { "title": "Wednesday", "poster": "https://image.tmdb.org/t/p/w500/9zcbqSxdsRMZWHYtyCd1nXPr2xq.jpg" }
+  ]
+}

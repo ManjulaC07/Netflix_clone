@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="logo" />
+      
+      <div class="hamburger" id="hamburger">
+       <span></span>
+       <span></span>
+       <span></span>
+      </div>
+    </div>
+      <nav>
+        <a href="#" data-text-key="home">Home</a>
+        <a href="#movie-list-container" data-text-key="movies">Movies</a>
+        <a href="#" data-text-key="mylist">My List</a>
+      </nav>
+   
+    <div class="header-right">
+      <button class="login-btn" id="loginBtn" data-text-key="login">Login</button>
+
+      <div class="language-select">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/206/206626.png"
+          alt="Language"
+          class="lang-icon"
+        />
+        <select id="language-dropdown" aria-label="Select Language">
+          <option value="en" selected>English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+
+      <button class="search-btn" aria-label="Search" id="searchBtn">
+        🔍
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" role="banner" aria-label="Featured Movie">
+    <div class="hero-content">
+      <h1 id="hero-title">Loading...</h1>
+      <p id="hero-description">
+        <!-- Movie description will go here -->
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-play" id="playBtn">▶ <span data-text-key="play">Play</span></button>
+        <button class="btn btn-info" id="infoBtn">ℹ <span data-text-key="moreinfo">More Info</span></button>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </section>
+
+  <!-- Search Bar -->
+  <div id="searchBar" class="search-bar hidden">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search movies and shows..."
+      aria-label="Search movies and shows"
+    />
+    <button id="searchCloseBtn" aria-label="Close Search">✕</button>
+  </div>
+
+  <!-- Movie Categories -->
+  <main>
+    <section id="movie-list-container" aria-live="polite"></section>
+  </main>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="loginModalClose" aria-label="Close Login Modal">✕</button>
+      <h2 id="loginModalTitle" data-text-key="login">Login</h2>
+      <form id="loginForm" autocomplete="off">
+        <label for="email" data-text-key="email">Email:</label>
+        <input type="email" id="email" name="email" required autocomplete="username" />
+
+        <label for="password" data-text-key="password">Password:</label>
+        <input type="password" id="password" name="password" required autocomplete="current-password" />
+
+        <button type="submit" class="btn btn-play" data-text-key="login">Login</button>
+      </form>
+      <p id="loginMsg" class="login-msg" role="alert" aria-live="assertive"></p>
+    </div>
+  </div>
+
+  <!-- Trailer Modal -->
+  <div id="trailerModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="trailerModalTitle">
+    <div class="modal-content trailer-content">
+      <button class="modal-close" id="trailerModalClose" aria-label="Close Trailer Modal">✕</button>
+      <h2 id="trailerModalTitle">Trailer</h2>
+      <div id="trailerContainer" class="trailer-container">
+        <!-- Trailer iframe goes here -->
+      </div>
+    </div>
+  </div>
+
+  <section class="reasons-to-join">
+  <h2>More Reasons to Join</h2>
+  <div class="reason-boxes">
+    <div class="reason-card">
+      <h3> Huge Library</h3>
+      <p>Access thousands of movies from every genre, decade, and mood—anytime, anywhere.</p>
+    </div>
+    <div class="reason-card">
+      <h3>Top-Rated Content</h3>
+      <p>Only the best of the best—critically acclaimed films and blockbuster hits curated for you.</p>
+    </div>
+    <div class="reason-card">
+      <h3>Instant Streaming</h3>
+      <p>Enjoy high-speed, buffer-free streaming on all your favorite devices.</p>
+    </div>
+    <div class="reason-card">
+      <h3> Personalized Experience</h3>
+      <p>Smart recommendations, watchlists, and more tailored just for you.</p>
+    </div>
+  </div>
+</section>
+<section class="faq-section">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What is Netflix?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Netflix is a streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How much does Netflix cost?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Netflix plans range from affordable basic options to premium tiers, depending on your needs.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Where can I watch?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        You can watch on smart TVs, game consoles, phones, tablets, and more.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How do I cancel?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Cancel anytime online in your account settings. No fees, no contracts.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What can I watch on Netflix?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        A vast library of series, films, documentaries, and more in many languages.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Is Netflix good for kids?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes, with a Kids experience and parental controls for safe viewing.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="getstartedsection">
+  <p>Ready to watch? Enter your email to create or restart your membership.</p>
+  <form id="getstartedform">
+    <input type="email" id="emailInput" placeholder="Enter your email">
+    <button type="submit">Get Started</button>
+  </form>
+</section>
+
+<div class="footer">
+  <p>Questions? Call<a href="tel:076-860-111-1324">076-860-111-1324</a></p>
+  
+  <div class="footer-columns">
+    <div>
+      <a href="#">FAQ</a>
+      <a href="#">Media Centre</a>
+      <a href="#">Ways to Watch</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Speed Test</a>
+    </div>
+    <div>
+      <a href="#">Help Centre</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Corporate Information</a>
+      <a href="#">Legal Notices</a>
+    </div>
+    <div>
+      <a href="#">Account</a>
+      <a href="#">Jobs</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Only on Netflix</a>
+    </div>
+  </div>
+
+    <select id="language-dropdown" aria-label="Select Language">
+          <option value="en" selected>English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+        </select>
+
+
+  <div class="footer-bottom">
+    <p>Netflix India</p>
+    <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a></p>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("nav");
+    const headerRight = document.querySelector(".header-right");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      headerRight.classList.toggle("active");
+    });
+  });
+  </script>
+
+</body>
+</html>
